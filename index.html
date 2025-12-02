@@ -3,36 +3,77 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dive into GPTHub</title>
+    <title>GPTHub</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="icon" href="chatgpt-logo.png">
 </head>
 <body>
-    <header>
-        <img src="chatgpt-logo.png" alt="ChatGPT Logo">
-        <h1>Dive into GPTHub</h1>
-    </header>
 
-    <main>
-        <h2>Features</h2>
-        <ul>
-            <li>Working Desync</li>
-            <li>Semi Invisible</li>
-            <li>Speed Boost</li>
-            <li>Fly</li>
-            <li>Player ESP</li>
-        </ul>
+    <!-- NAVBAR -->
+    <nav>
+        <div class="logo">gpthub.</div>
+        <div class="links">
+            <a href="#features">Features</a>
+            <a href="#script">Script</a>
+            <a href="#discord" class="btn-nav">Discord</a>
+        </div>
+    </nav>
 
-        <h2>Script</h2>
+    <!-- HERO SECTION -->
+    <section class="hero">
+        <h1>Your Scripts.<br><span class="highlight">Enhanced.</span></h1>
+        <p class="subtext">GPTHub provides powerful Roblox script features with stunning performance.</p>
+
+        <div class="hero-buttons">
+            <a href="#script" class="btn-main">Get Script</a>
+            <a href="#discord" class="btn-secondary">Discord</a>
+        </div>
+    </section>
+
+    <!-- FEATURES -->
+    <section id="features" class="features">
+        <h2 class="section-title">Core Features.</h2>
+
+        <div class="feature-grid">
+            <div class="card">
+                <h3>Working Desync</h3>
+                <p>Full desync with smooth movement and player desync methods.</p>
+            </div>
+
+            <div class="card">
+                <h3>Semi Invisible</h3>
+                <p>Become partially invisible to other players with safe toggles.</p>
+            </div>
+
+            <div class="card">
+                <h3>Speed Boost</h3>
+                <p>Adjustable walk speed and sprinting enhancements.</p>
+            </div>
+
+            <div class="card">
+                <h3>Fly</h3>
+                <p>Smooth controlled flight with mobile support.</p>
+            </div>
+
+            <div class="card">
+                <h3>Player ESP</h3>
+                <p>Highlight players through walls with customizable outlines.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- SCRIPT SECTION -->
+    <section id="script" class="script">
+        <h2 class="section-title">Script.</h2>
+
         <pre>
-
-loadstring(game:HttpGet("https://raw.githubusercontent.com/XploiteRzippy/GPTHub/refs/heads/main/GPTHubScript",true))()
-
+-- GPTHub Script
+loadstring(game:HttpGet("https://yourwebsite.netlify.app/script.lua"))()
         </pre>
-    </main>
+    </section>
 
     <footer>
-        &copy; 2025 GPTHub | Made with ❤️ by Alex
+        © 2025 GPTHub | Built by Alex
     </footer>
+
 </body>
 </html>
