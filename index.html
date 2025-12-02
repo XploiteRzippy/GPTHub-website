@@ -1,79 +1,192 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>GPTHub</title>
-    <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>GPTHub</title>
+
+<style>
+    body {
+        margin: 0;
+        background: #000;
+        font-family: 'Poppins', sans-serif;
+        color: white;
+        overflow-x: hidden;
+    }
+
+    /* Fade-in animations */
+    .fade {
+        opacity: 0;
+        transform: translateY(20px);
+        animation: fadeIn 1.2s ease forwards;
+    }
+
+    @keyframes fadeIn {
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    header {
+        padding: 25px 50px;
+        font-size: 22px;
+        font-weight: 600;
+    }
+
+    .title-section {
+        text-align: center;
+        padding: 120px 20px;
+    }
+
+    .title {
+        font-size: 55px;
+        font-weight: 700;
+    }
+
+    .purple {
+        color: #a259ff;
+    }
+
+    .features-title {
+        text-align: center;
+        font-size: 34px;
+        margin-top: 60px;
+        margin-bottom: 40px;
+    }
+
+    .feature-boxes {
+        display: flex;
+        justify-content: center;
+        gap: 30px;
+        flex-wrap: wrap;
+        padding: 0 20px;
+    }
+
+    .box {
+        width: 280px;
+        padding: 25px;
+        background: #0f0f0f;
+        border-radius: 18px;
+        border: 1px solid #1c1c1c;
+        transition: 0.3s;
+    }
+
+    .box:hover {
+        transform: translateY(-8px);
+        box-shadow: 0 0 20px #a259ff55;
+    }
+
+    /* Button styles */
+    .btn {
+        padding: 12px 24px;
+        border-radius: 10px;
+        border: none;
+        cursor: pointer;
+        margin: 10px;
+        font-size: 16px;
+        transition: 0.25s;
+    }
+
+    .purple-btn {
+        background: #a259ff;
+        color: white;
+    }
+
+    .purple-btn:hover {
+        background: #c38bff;
+        transform: scale(1.05);
+        box-shadow: 0 0 10px #a259ffaa;
+    }
+
+    /* Script section */
+    .script-box {
+        margin: 80px auto;
+        width: 90%;
+        max-width: 800px;
+        background: #0f0f0f;
+        border: 1px solid #1c1c1c;
+        padding: 20px;
+        border-radius: 18px;
+        position: relative;
+    }
+
+    .copy-btn {
+        position: absolute;
+        top: 15px;
+        right: 15px;
+    }
+
+    pre {
+        white-space: pre-wrap;
+        word-break: break-word;
+        padding: 10px;
+        color: #d1d1d1;
+    }
+</style>
 </head>
+
 <body>
 
-    <!-- NAVBAR -->
-    <nav>
-        <div class="logo">gpthub.</div>
-        <div class="links">
-            <a href="#features">Features</a>
-            <a href="#script">Script</a>
-            <a href="#discord" class="btn-nav">Discord</a>
-        </div>
-    </nav>
+<header class="fade">GPTHub</header>
 
-    <!-- HERO SECTION -->
-    <section class="hero">
-        <h1>Your Scripts.<br><span class="highlight">Enhanced.</span></h1>
-        <p class="subtext">GPTHub provides powerful Roblox script features with stunning performance.</p>
+<section class="title-section fade">
+    <div class="title">Dive Into <span class="purple">GPTHub</span></div>
+    <p style="font-size:18px; opacity:0.7;">Powerful Roblox features. Smooth UI. Real performance.</p>
 
-        <div class="hero-buttons">
-            <a href="#script" class="btn-main">Get Script</a>
-            <a href="#discord" class="btn-secondary">Discord</a>
-        </div>
-    </section>
+    <button class="btn purple-btn">Get Started</button>
+    <button class="btn" style="background:#1c1c1c; color:white;">Discord</button>
+</section>
 
-    <!-- FEATURES -->
-    <section id="features" class="features">
-        <h2 class="section-title">Core Features.</h2>
+<h2 class="features-title fade">Core Features</h2>
 
-        <div class="feature-grid">
-            <div class="card">
-                <h3>Working Desync</h3>
-                <p>Full desync with smooth movement and player desync methods.</p>
-            </div>
+<div class="feature-boxes fade">
+    <div class="box">
+        <h3>⚡ Working Desync</h3>
+        <p>A real desync engine with smooth performance.</p>
+    </div>
 
-            <div class="card">
-                <h3>Semi Invisible</h3>
-                <p>Become partially invisible to other players with safe toggles.</p>
-            </div>
+    <div class="box">
+        <h3>👤 Semi Invisible</h3>
+        <p>Disappear partially while staying in control.</p>
+    </div>
 
-            <div class="card">
-                <h3>Speed Boost</h3>
-                <p>Adjustable walk speed and sprinting enhancements.</p>
-            </div>
+    <div class="box">
+        <h3>🚀 Speed Boost</h3>
+        <p>Move much faster than normal players.</p>
+    </div>
 
-            <div class="card">
-                <h3>Fly</h3>
-                <p>Smooth controlled flight with mobile support.</p>
-            </div>
+    <div class="box">
+        <h3>🕊️ Fly</h3>
+        <p>Fully customizable flight system.</p>
+    </div>
 
-            <div class="card">
-                <h3>Player ESP</h3>
-                <p>Highlight players through walls with customizable outlines.</p>
-            </div>
-        </div>
-    </section>
+    <div class="box">
+        <h3>🎯 Player ESP</h3>
+        <p>Locate players through walls with ease.</p>
+    </div>
+</div>
 
-    <!-- SCRIPT SECTION -->
-    <section id="script" class="script">
-        <h2 class="section-title">Script.</h2>
+<!-- Script Section -->
+<div class="script-box fade">
+    <button class="btn purple-btn copy-btn" onclick="copyScript()">Copy Script</button>
 
-        <pre>
--- GPTHub Script
-loadstring(game:HttpGet("https://yourwebsite.netlify.app/script.lua"))()
-        </pre>
-    </section>
+<pre id="script">
+loadstring(game:HttpGet("https://raw.githubusercontent.com/XploiteRzippy/GPTHub/refs/heads/main/GPTHubScript",true))()
 
-    <footer>
-        © 2025 GPTHub | Built by Alex
-    </footer>
+</pre>
+</div>
+
+<script>
+function copyScript() {
+    let text = document.getElementById("script").innerText;
+    navigator.clipboard.writeText(text);
+
+    let btn = document.querySelector(".copy-btn");
+    btn.innerText = "Copied!";
+    setTimeout(() => (btn.innerText = "Copy Script"), 1500);
+}
+</script>
 
 </body>
 </html>
