@@ -1,151 +1,132 @@
-/* GENERAL */
 body {
     margin: 0;
-    padding: 0;
-    background: #0c0c0c;
+    background: #000;
+    font-family: 'Poppins', sans-serif;
     color: white;
-    font-family: 'Inter', sans-serif;
+    overflow-x: hidden;
 }
 
-a {
-    text-decoration: none;
-    color: inherit;
+/* Fade animations */
+.fade {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeIn 1.2s ease forwards;
 }
 
-/* NAVBAR */
-nav {
-    width: 100%;
-    padding: 20px 40px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    color: #fff;
-    position: sticky;
-    top: 0;
-    background: rgba(12, 12, 12, 0.8);
-    backdrop-filter: blur(10px);
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
-.logo {
-    font-size: 1.7em;
+header {
+    padding: 25px 50px;
+    font-size: 22px;
+    font-weight: 600;
+}
+
+.title-section {
+    text-align: center;
+    padding: 120px 20px;
+}
+
+.title {
+    font-size: 55px;
     font-weight: 700;
 }
 
-.links a {
-    margin-left: 25px;
-    opacity: 0.7;
-    transition: 0.2s;
-}
-
-.links a:hover {
-    opacity: 1;
-}
-
-.btn-nav {
-    padding: 8px 16px;
-    border: 1px solid #5f00ff;
-    border-radius: 8px;
-}
-
-/* HERO SECTION */
-.hero {
-    text-align: center;
-    padding: 150px 20px;
-}
-
-.hero h1 {
-    font-size: 3.3em;
-    font-weight: 800;
-}
-
-.highlight {
-    color: #b073ff;
-}
-
-.subtext {
-    margin-top: 15px;
-    font-size: 1.2em;
+.subtitle {
+    font-size: 18px;
     opacity: 0.7;
 }
 
-.hero-buttons {
-    margin-top: 35px;
+.purple {
+    color: #a259ff;
 }
 
-.btn-main, .btn-secondary {
-    padding: 14px 28px;
-    border-radius: 10px;
-    margin: 10px;
-    font-weight: 600;
-    display: inline-block;
-}
-
-.btn-main {
-    background: #7d2eff;
-}
-
-.btn-secondary {
-    border: 1px solid #7d2eff;
-}
-
-/* SECTION TITLES */
-.section-title {
+.features-title {
     text-align: center;
-    font-size: 2.2em;
+    font-size: 34px;
     margin-top: 60px;
     margin-bottom: 40px;
-    font-weight: 700;
 }
 
-/* FEATURES */
-.features {
-    padding: 30px;
+.feature-boxes {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+    padding: 0 20px;
 }
 
-.feature-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-    gap: 25px;
-    max-width: 1000px;
-    margin: auto;
-}
-
-.card {
-    background: #141414;
+.box {
+    width: 280px;
     padding: 25px;
-    border-radius: 12px;
-    border: 1px solid #272727;
-    transition: 0.2s;
+    background: #0f0f0f;
+    border-radius: 18px;
+    border: 1px solid #1c1c1c;
+    transition: 0.3s;
 }
 
-.card h3 {
-    color: #b073ff;
+.box:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 0 20px #a259ff55;
 }
 
-.card:hover {
+/* Buttons */
+.btn {
+    padding: 12px 24px;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+    margin: 10px;
+    font-size: 16px;
+    transition: 0.25s;
+}
+
+.purple-btn {
+    background: #a259ff;
+    color: white;
+}
+
+.purple-btn:hover {
+    background: #c38bff;
+    transform: scale(1.05);
+    box-shadow: 0 0 10px #a259ffaa;
+}
+
+.dark-btn {
     background: #1c1c1c;
-    transform: translateY(-5px);
+    color: white;
 }
 
-/* SCRIPT BOX */
-.script {
+.dark-btn:hover {
+    background: #2a2a2a;
+    transform: scale(1.05);
+}
+
+/* Script section */
+.script-box {
+    margin: 80px auto;
+    width: 90%;
+    max-width: 800px;
+    background: #0f0f0f;
+    border: 1px solid #1c1c1c;
     padding: 20px;
-    max-width: 900px;
-    margin: auto;
+    border-radius: 18px;
+    position: relative;
+}
+
+.copy-btn {
+    position: absolute;
+    top: 15px;
+    right: 15px;
 }
 
 pre {
-    background: #111;
-    padding: 20px;
-    border-radius: 10px;
-    border: 1px solid #222;
-    overflow-x: auto;
-}
-
-/* FOOTER */
-footer {
-    text-align: center;
-    margin-top: 60px;
-    padding: 30px;
-    opacity: 0.6;
+    white-space: pre-wrap;
+    word-break: break-word;
+    padding: 10px;
+    color: #d1d1d1;
 }
