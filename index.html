@@ -5,125 +5,8 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>GPTHub</title>
 
-<style>
-    body {
-        margin: 0;
-        background: #000;
-        font-family: 'Poppins', sans-serif;
-        color: white;
-        overflow-x: hidden;
-    }
-
-    /* Fade-in animations */
-    .fade {
-        opacity: 0;
-        transform: translateY(20px);
-        animation: fadeIn 1.2s ease forwards;
-    }
-
-    @keyframes fadeIn {
-        to {
-            opacity: 1;
-            transform: translateY(0);
-        }
-    }
-
-    header {
-        padding: 25px 50px;
-        font-size: 22px;
-        font-weight: 600;
-    }
-
-    .title-section {
-        text-align: center;
-        padding: 120px 20px;
-    }
-
-    .title {
-        font-size: 55px;
-        font-weight: 700;
-    }
-
-    .purple {
-        color: #a259ff;
-    }
-
-    .features-title {
-        text-align: center;
-        font-size: 34px;
-        margin-top: 60px;
-        margin-bottom: 40px;
-    }
-
-    .feature-boxes {
-        display: flex;
-        justify-content: center;
-        gap: 30px;
-        flex-wrap: wrap;
-        padding: 0 20px;
-    }
-
-    .box {
-        width: 280px;
-        padding: 25px;
-        background: #0f0f0f;
-        border-radius: 18px;
-        border: 1px solid #1c1c1c;
-        transition: 0.3s;
-    }
-
-    .box:hover {
-        transform: translateY(-8px);
-        box-shadow: 0 0 20px #a259ff55;
-    }
-
-    /* Button styles */
-    .btn {
-        padding: 12px 24px;
-        border-radius: 10px;
-        border: none;
-        cursor: pointer;
-        margin: 10px;
-        font-size: 16px;
-        transition: 0.25s;
-    }
-
-    .purple-btn {
-        background: #a259ff;
-        color: white;
-    }
-
-    .purple-btn:hover {
-        background: #c38bff;
-        transform: scale(1.05);
-        box-shadow: 0 0 10px #a259ffaa;
-    }
-
-    /* Script section */
-    .script-box {
-        margin: 80px auto;
-        width: 90%;
-        max-width: 800px;
-        background: #0f0f0f;
-        border: 1px solid #1c1c1c;
-        padding: 20px;
-        border-radius: 18px;
-        position: relative;
-    }
-
-    .copy-btn {
-        position: absolute;
-        top: 15px;
-        right: 15px;
-    }
-
-    pre {
-        white-space: pre-wrap;
-        word-break: break-word;
-        padding: 10px;
-        color: #d1d1d1;
-    }
-</style>
+<!-- Link to external CSS -->
+<link rel="stylesheet" href="style.css">
 </head>
 
 <body>
@@ -132,10 +15,10 @@
 
 <section class="title-section fade">
     <div class="title">Dive Into <span class="purple">GPTHub</span></div>
-    <p style="font-size:18px; opacity:0.7;">Powerful Roblox features. Smooth UI. Real performance.</p>
+    <p class="subtitle">Powerful Roblox features. Smooth UI. Real performance.</p>
 
     <button class="btn purple-btn">Get Started</button>
-    <button class="btn" style="background:#1c1c1c; color:white;">Discord</button>
+    <button class="btn dark-btn">Discord</button>
 </section>
 
 <h2 class="features-title fade">Core Features</h2>
