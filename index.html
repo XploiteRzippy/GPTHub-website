@@ -15,7 +15,7 @@
             <a href="#features">Features</a>
             <a href="#script">Script</a>
             <a href="#products">Products</a>
-            <a href="#discord" class="btn-nav">Discord</a>
+            <a href="#contact" class="btn-nav">Contact</a>
         </div>
     </nav>
 
@@ -26,7 +26,7 @@
 
         <div class="hero-buttons">
             <a href="#script" class="btn-main btn-anim">Get Script</a>
-            <a href="#discord" class="btn-secondary btn-anim">Discord</a>
+            <a href="#contact" class="btn-secondary btn-anim">Send Message</a>
         </div>
     </section>
 
@@ -60,19 +60,35 @@ loadstring(game:HttpGet("https://yourwebsite.netlify.app/script.lua"))()
     <section id="products" class="products fade">
         <h2 class="section-title">Products</h2>
         <div class="product-grid">
+
             <!-- Product 1 -->
             <div class="product-card">
                 <h3>GPTHub Premium Script</h3>
-                <p>Price: $5.00</p>
-                <a href="https://gumroad.com/l/YOURPRODUCTLINK" target="_blank" class="buy-btn">Buy Now</a>
+                <p>Price: $50 Robux</p>
+                <a href="https://www.roblox.com/game-pass/12345678/Your-Gamepass-Name" target="_blank" class="buy-btn">Buy Now</a>
+                <p class="note">SEND A MESSAGE AFTER BUYING</p>
             </div>
+
             <!-- Product 2 -->
             <div class="product-card">
-                <h3>GPTHub Ultimate Script</h3>
-                <p>Price: $10.00</p>
-                <a href="https://gumroad.com/l/YOURPRODUCTLINK2" target="_blank" class="buy-btn">Buy Now</a>
+                <h3>Ultimate Script Access</h3>
+                <p>Price: $100 Robux</p>
+                <a href="https://www.roblox.com/game-pass/87654321/Ultimate-Script" target="_blank" class="buy-btn">Buy Now</a>
+                <p class="note">SEND A MESSAGE AFTER BUYING</p>
             </div>
+
         </div>
+    </section>
+
+    <!-- CONTACT FORM -->
+    <section id="contact" class="contact fade">
+        <h2 class="section-title">Send Me a Message</h2>
+        <form id="contact-form">
+            <input type="text" id="username" placeholder="Your Roblox Username" required>
+            <textarea id="message" placeholder="Your message..." required></textarea>
+            <button type="submit" class="btn-main btn-anim">Send</button>
+        </form>
+        <p id="form-status" style="margin-top:10px;"></p>
     </section>
 
     <footer>
@@ -88,6 +104,39 @@ function copyScript() {
     btn.innerText = "Copied!";
     setTimeout(() => { btn.innerText = "Copy Script"; }, 1500);
 }
+
+// CONTACT FORM WEBHOOK
+const form = document.getElementById('contact-form');
+const status = document.getElementById('form-status');
+const webhookURL = "https://discord.com/api/webhooks/1446084802171375749/xLhekg-K6HPcUIpa5z4hP7QFGfP11W86yJvUHuP8uvfTG2lUh4iKerxZfz3A6deiI7TG";
+
+form.addEventListener('submit', async (e) => {
+    e.preventDefault();
+
+    const username = document.getElementById('username').value;
+    const message = document.getElementById('message').value;
+
+    const payload = {
+        content: `**Message from:** ${username}\n**Message:** ${message}`
+    };
+
+    try {
+        const response = await fetch(webhookURL, {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify(payload)
+        });
+
+        if (response.ok) {
+            status.innerText = "Message sent!";
+            form.reset();
+        } else {
+            status.innerText = "Failed to send message.";
+        }
+    } catch (err) {
+        status.innerText = "Error sending message.";
+    }
+});
 </script>
 
 </body>
